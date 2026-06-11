@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Convoyage Nicolas</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+<img src="IMG_5136.png" class="logo">
+
+<h1>Convoyage Nicolas</h1>
+
+<p>État des lieux véhicule</p>
+</header>
+
+<div class="container">
+
+<h2>Nouvelle mission</h2>
+
+<input type="text" id="client" placeholder="Nom du client">
+
+<input type="text" id="telephone" placeholder="Téléphone">
+
+<input type="text" id="immat" placeholder="Immatriculation">
+
+<input type="text" id="vehicule" placeholder="Marque / Modèle">
+
+<input type="number" id="kmdepart" placeholder="Kilométrage départ">
+
+<h3>Photos départ</h3>
+
+<input type="file" id="photosDepart" multiple accept="image/*" capture="environment">
+
+<h3>Signature vendeur</h3>
+
+<canvas id="signatureVendeur"></canvas>
+
+<button onclick="clearVendeur()">
+Effacer signature vendeur
+</button>
+
+<hr>
+
+<input type="number" id="kmarrivee" placeholder="Kilométrage arrivée">
+
+<h3>Photos arrivée</h3>
+
+<input type="file" id="photosArrivee" multiple accept="image/*" capture="environment">
+
+<h3>Photo du bon de livraison</h3>
+
+<input type="file" id="bonLivraison" accept="image/*" capture="environment">
+
+<h3>Signature client</h3>
+
+<canvas id="signatureClient"></canvas>
+
+<button onclick="clearClient()">
+Effacer signature client
+</button>
+
+<br><br>
+
+<button class="saveBtn" onclick="saveMission()">
+Enregistrer la mission
+</button>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
